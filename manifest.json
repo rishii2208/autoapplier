@@ -3,8 +3,11 @@
   "name": "AI-Powered AutoFill Copilot",
   "version": "1.0",
   "description": "Automatically fill job applications with AI-powered resume parsing and form detection",
-  "permissions": ["activeTab", "storage", "scripting"],
+  "permissions": ["activeTab", "storage", "scripting", "contextMenus"],
   "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
