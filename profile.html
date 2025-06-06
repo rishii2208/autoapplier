@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Profile - AI-Powered AutoFill Copilot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-card">
+      <h1>Edit Your Profile</h1>
+      <p>Update your information for auto-filling job applications.</p>
+      
+      <div id="profileForm">
+        <!-- Will be populated with profile data -->
+        <div class="loading">Loading your profile...</div>
+      </div>
+      
+      <div class="api-key-section">
+        <label for="geminiApiKey">Gemini API Key:</label>
+        <input type="text" id="geminiApiKey" placeholder="Enter your Gemini API key">
+        <p class="hint">Your API key is stored locally and never shared.</p>
+      </div>
+      
+      <div class="buttons">
+        <button id="saveProfileBtn" class="primary-btn">Save Profile</button>
+        <button id="cancelBtn" class="secondary-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI-Powered AutoFill Copilot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="popup-container">
+    <h1>AutoFill Copilot</h1>
+    
+    <div class="status-bar">
+      <span class="status-indicator" id="statusIndicator"></span>
+      <span id="statusText">Checking status...</span>
+    </div>
+    
+    <div class="action-buttons">
+      <button id="fillFormBtn" class="primary-btn">Fill Form</button>
+      <button id="editProfileBtn" class="primary-btn">Edit Profile</button>
+    </div>
+    
+    <div class="section" id="formFieldsSection" style="display: none;">
+      <h3>Detected Form Fields</h3>
+      <div id="detectedFields"></div>
+    </div>
+    
+    <div class="section">
+      <h3>Options</h3>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="autoFillEnabled" checked>
+          Auto-fill forms when extension is clicked
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="useAIForUnknownFields" checked>
+          Use AI to fill unknown fields
+        </label>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <button id="resetBtn" class="secondary-btn">Reset Profile</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
