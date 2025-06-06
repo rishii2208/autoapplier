@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to AI-Powered AutoFill Copilot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-card">
+      <h1>Welcome to AI-Powered AutoFill Copilot</h1>
+      <p>Let's set up your profile to automatically fill job applications.</p>
+      
+      <div class="setup-steps">
+        <div class="step active" id="step1">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h2>Upload Your Resume</h2>
+            <p>We'll extract your information automatically using AI.</p>
+            <div class="upload-area" id="uploadArea">
+              <img src="images/upload-icon.png" alt="Upload" class="upload-icon">
+              <p>Drag & drop your resume here or</p>
+              <label for="resumeUpload" class="upload-btn">Browse Files</label>
+              <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx" hidden>
+            </div>
+            <div class="api-key-section">
+              <label for="geminiApiKey">Gemini API Key:</label>
+              <input type="text" id="geminiApiKey" placeholder="Enter your Gemini API key">
+              <p class="hint">Your API key is stored locally and never shared.</p>
+            </div>
+            <button id="parseResumeBtn" class="primary-btn" disabled>Parse Resume</button>
+          </div>
+        </div>
+        
+        <div class="step" id="step2">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h2>Review Extracted Information</h2>
+            <p>Verify and edit the information extracted from your resume.</p>
+            <div id="extractedInfo" class="extracted-info">
+              <!-- This will be populated with extracted info -->
+            </div>
+            <button id="saveProfileBtn" class="primary-btn">Save Profile</button>
+          </div>
+        </div>
+        
+        <div class="step" id="step3">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h2>You're All Set!</h2>
+            <p>Now you can automatically fill job applications with your information.</p>
+            <p>Click the extension icon on any job application page to fill the form.</p>
+            <button id="finishSetupBtn" class="primary-btn">Finish Setup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="welcome.js"></script>
+</body>
+</html>
